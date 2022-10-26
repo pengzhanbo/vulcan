@@ -1,7 +1,12 @@
 # Vulcan
 
 <p align="center">🚀🚀一个基于 vite + vue3 的项目模板，帮助快速创建 Mobile Web 应用。🚀🚀</p>
-
+<br>
+<p align="center">
+  <a href="https://vulcan-vue.netlify.app/">Live Demo</a>
+</p>
+<br>
+<br>
 ## 特性
 
 - ⚡️ [vue 3](https://github.com/vuejs/core), [vite 3](https://github.com/vitejs/vite), [pnpm](https://pnpm.io/), [esbuild](https://github.com/evanw/esbuild) - 非常快！
@@ -13,7 +18,7 @@
 - 📥 自动加载 API， Composition API 自动引入
 - ⚙️ 使用 [Vitest](https://github.com/vitest-dev/vitest) 进行单元测试, [Cypress](https://cypress.io/) 进行 E2E 测试
 - 🎨 使用 postcss / sass 编写 CSS
-- 📒 封装 [axios](https://axios-http.com) - 更好的管理API，代码即API文档
+- 📒 封装 [axios](https://axios-http.com) - 更好的管理 API，代码即 API 文档
 - ⚖️ px to viewport
 - 📐 eslint / prettier
 - ⏳ git hooks - 规范 git commit 内容格式
@@ -36,7 +41,7 @@
 
 ### 编码风格
 
-- [prettier](https://prettier.io) 
+- [prettier](https://prettier.io)
 - [eslint](https://eslint.org) - 使用 [@pengzhanbo/eslint-config]() 配置， 单引号，无分号
 - 使用 `<script setup>` SFC 语法
 
@@ -69,32 +74,35 @@ pnpm i # 如果你没装过 pnpm, 可以先运行: npm install -g pnpm
 
 - [ ] 在 `LICENSE` 中更新作者信息
 - [ ] 在 `package.json` 中更新 `name` 字段
-- [ ] 删除不必要的 DEMO文件
+- [ ] 删除不必要的 DEMO 文件
 - [ ] 删除不必要的路由
-- [ ] 重新整理 `README` 
+- [ ] 重新整理 `README`
 
 ## 使用
 
 ### 开发
 
 执行以下命令即可在 [localhost:8080/](http://localhost:8080/) 访问
-``` sh
+
+```sh
 pnpm dev
 ```
 
 ### 构建
 
 执行以下命令即可进行项目构建
-``` sh
+
+```sh
 pnpm build
 ```
+
 构建后的代码将会在 `dist` 中生成
 
 ## 浏览器支持
 
 | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/edge/edge_48x48.png" alt=" Edge" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)</br>IE | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/edge/edge_48x48.png" alt=" Edge" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)</br>Edge | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/firefox/firefox_48x48.png" alt="Firefox" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)</br>Firefox | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/chrome/chrome_48x48.png" alt="Chrome" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)</br>Chrome | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/safari/safari_48x48.png" alt="Safari" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)</br>Safari |
-| :-: | :-: | :-: | :-: | :-: |
-| not support | last 2 versions | last 2 versions | last 2 versions | last 2 versions |
+| :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
+|                                                                                             not support                                                                                              |                                                                                            last 2 versions                                                                                             |                                                                                                  last 2 versions                                                                                                  |                                                                                                last 2 versions                                                                                                |                                                                                                last 2 versions                                                                                                |
 
 ## LICENSE
 
