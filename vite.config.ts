@@ -20,10 +20,21 @@ export default defineConfig(({ mode }) => {
       __APP_BASE_URL__: stringify(env.APP_BASE_URL),
       __APP_API_URL__: stringify(env.APP_API_URL),
       __APP_FETCH_TIMEOUT__: stringify(env.APP_FETCH_TIMEOUT),
+      __IS_DEVELOPMENT__: mode === 'development',
     },
     resolve: {
       alias: {
         '~/': `${path.resolve(__dirname, 'src')}/`,
+      },
+    },
+    server: {
+      // 接口代理
+      proxy: {
+        '^/api': {
+          target: '',
+          changeOrigin: true,
+          rewrite: (path) => path.replace(/^\/api/, ''),
+        },
       },
     },
     plugins: [
@@ -33,6 +44,7 @@ export default defineConfig(({ mode }) => {
       }),
       vueJsx(),
 
+      // /scripts/vite-plugin/vconsole.ts
       vconsole(),
 
       // https://github.com/intlify/bundle-tools/blob/main/packages/vite-plugin-vue-i18n/README.md
