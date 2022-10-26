@@ -1,0 +1,29 @@
+html,
+body,
+#app {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: var(--c-bg);
+  font-size: 32px;
+  color: var(--c-text);
+  transition: color 0.2s ease, background-color 0.2s ease;
+  font-family: var(--font-family);
+}
+
+:root {
+  scroll-behavior: smooth;
+}
+
+#app {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon {
+  width: 1em;
+  height: 1em;
+  font-size: 1em;
+  vertical-align: middle;
+  line-height: 1;
+}
