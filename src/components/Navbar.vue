@@ -32,7 +32,7 @@ const goBack = () => {
   background-color: var(--c-bg-navbar);
   border-bottom: solid 1px var(--c-border);
   font-size: 36px;
-  transition: background-color 0.2s ease border-color 0.2s ease;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
 }
 
 .navbar-back {

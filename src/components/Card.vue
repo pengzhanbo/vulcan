@@ -37,6 +37,7 @@ defineProps({
 
 <style lang="scss" scoped>
 .card-wrapper {
+  box-sizing: border-box;
   width: 100%;
   padding: 20px 40px;
   background-color: var(--c-bg-card);

@@ -21,10 +21,14 @@ const { increment, decrement } = store
 
 <style lang="scss">
 .counter-wrapper {
-  padding: 1.25rem;
+  padding: 20px;
+
+  button {
+    font-size: 32px;
+  }
 
   .dec {
-    margin-left: 1rem;
+    margin-left: 18px;
   }
 }
 </style>
