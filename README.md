@@ -20,6 +20,7 @@
 - ⚙️ 使用 [Vitest](https://github.com/vitest-dev/vitest) 进行单元测试, [Cypress](https://cypress.io/) 进行 E2E 测试
 - 🎨 使用 postcss / sass 编写 CSS
 - 📒 封装 [axios](https://axios-http.com) - 更好的管理 API，代码即 API 文档
+- 📬 API Mock Data - 通过 mock-dev-server 在项目开发环境中对 接口进行 mock
 - ⚖️ px to viewport
 - 📐 eslint / prettier
 - ⏳ git hooks - 规范 git commit 内容格式
@@ -39,6 +40,7 @@
 - [unplugin-auto-import](https://github.com/antfu/unplugin-auto-import) - 自动加载 composition-api, 无需引入
 - [vite-plugin-inspect](https://github.com/antfu/vite-plugin-inspect) - 模块依赖分析工具
 - [vite-plugin-vconsole](/scripts//vite-plugins/vconsole.ts) - 自动导入 [vconsole]()
+- [vite-plugin-mock-dev-server](https://github.com/pengzhanbo/vite-plugin-mock-dev-server) - 在项目开发服务中添加 mock-dev-server，自动加载 mock 文件
 
 ### 编码风格
 
