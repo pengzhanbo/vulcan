@@ -49,9 +49,7 @@ export default defineConfig(({ mode }) => {
       vconsole(),
 
       // https://github.com/pengzhanbo/vite-plugin-mock-dev-server
-      mockDevServer({
-        include: 'mock/**/*.mock.ts',
-      }),
+      mockDevServer(),
 
       // https://github.com/intlify/bundle-tools/blob/main/packages/vite-plugin-vue-i18n/README.md
       vueI18n({
