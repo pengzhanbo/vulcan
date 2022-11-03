@@ -40,7 +40,7 @@ specifiers:
   vconsole: ^3.14.7
   vite: ^3.1.8
   vite-plugin-inspect: ^0.7.5
-  vite-plugin-mock-dev-server: ^0.2.0
+  vite-plugin-mock-dev-server: ^0.2.2
   vitest: ^0.24.3
   vue: ^3.2.41
   vue-i18n: ^9.2.2
@@ -92,7 +92,7 @@ devDependencies:
   vconsole: 3.14.7
   vite: 3.1.8_sass@1.55.0+terser@5.15.1
   vite-plugin-inspect: 0.7.5_vite@3.1.8
-  vite-plugin-mock-dev-server: 0.2.0_sass@1.55.0+terser@5.15.1
+  vite-plugin-mock-dev-server: 0.2.2_sass@1.55.0+terser@5.15.1
   vitest: 0.24.3_sass@1.55.0+terser@5.15.1
   vue-tsc: 1.0.9_typescript@4.8.4
 
@@ -6408,8 +6408,8 @@ packages:
       - supports-color
     dev: true
 
-  /vite-plugin-mock-dev-server/0.2.0_sass@1.55.0+terser@5.15.1:
-    resolution: {integrity: sha512-iRrsuFf78qJhgOblFc08ZrTot9ZsQAdXk8BdyF9J/2kJMbn7ciIFu8Carl8w4g+15kz58BSfVWt2ZdKMNImCOw==}
+  /vite-plugin-mock-dev-server/0.2.2_sass@1.55.0+terser@5.15.1:
+    resolution: {integrity: sha512-1Pd15RuoB6naJMchUHLQ7ca4ejElvETOT3ABXi8fweeUQTlKNWI7ioO3Qb5t9D2WLH5o5xxuSyRcg3Y6WsRzkg==}
     engines: {node: '>=16'}
     dependencies:
       '@rollup/pluginutils': 5.0.2
