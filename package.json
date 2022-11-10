@@ -77,7 +77,7 @@
     "vconsole": "^3.14.7",
     "vite": "^3.1.8",
     "vite-plugin-inspect": "^0.7.5",
-    "vite-plugin-mock-dev-server": "^0.2.3",
+    "vite-plugin-mock-dev-server": "^0.3.0",
     "vitest": "^0.24.3",
     "vue-tsc": "^1.0.9"
   },
