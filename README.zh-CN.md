@@ -38,7 +38,7 @@
 - [Vue-Router](https://github.com/vuejs/router) - 路由系统
 - [Pinia](https://pinia.vuejs.org) - 状态管理
 - [Vue-i18n](https://github.com/intlify/vue-i18n-next) - 国际化
-  - [vite-plugin-vue-i18n](https://github.com/intlify/bundle-tools/tree/main/packages/vite-plugin-vue-i18n) - `vue-i18n` 插件
+  - [@intlify/unplugin-vue-i18n](https://github.com/intlify/bundle-tools/tree/main/packages/unplugin-vue-i18n) - `vue-i18n` 插件
 - [VueUse](https://github.com/antfu/vueuse) - composition API 实用工具库
 - [axios](https://axios-http.com) - http 请求库
 - [js-cookie](https://github.com/js-cookie/js-cookie) - cookie 管理

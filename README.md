@@ -38,7 +38,7 @@
 - [Vue-Router](https://github.com/vuejs/router) - Router system
 - [Pinia](https://pinia.vuejs.org) - State management
 - [Vue-i18n](https://github.com/intlify/vue-i18n-next) - Internationalization
-  - [vite-plugin-vue-i18n](https://github.com/intlify/bundle-tools/tree/main/packages/vite-plugin-vue-i18n) - Vite plugin for `vue-i18n`
+  - [@intlify/unplugin-vue-i18n](https://github.com/intlify/bundle-tools/tree/main/packages/unplugin-vue-i18n) - Vite plugin for `vue-i18n`
 - [VueUse](https://github.com/antfu/vueuse) - Composition APIs
 - [axios](https://axios-http.com) - http
 - [js-cookie](https://github.com/js-cookie/js-cookie) - Cookie Management

@@ -83,6 +83,6 @@
   },
   "packageManager": "pnpm@7.18.2",
   "engines": {
-    "node": ">=16"
+    "node": "^14.18.0 || >=16"
   }
 }
