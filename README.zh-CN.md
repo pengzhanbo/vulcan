@@ -16,7 +16,7 @@
 
 ## 特性
 
-- ⚡️ [vue 3](https://github.com/vuejs/core), [vite 3](https://github.com/vitejs/vite), [pnpm](https://pnpm.io/), [esbuild](https://github.com/evanw/esbuild) - 非常快！
+- ⚡️ [vue 3](https://github.com/vuejs/core), [vite 4](https://github.com/vitejs/vite), [pnpm](https://pnpm.io/), [esbuild](https://github.com/evanw/esbuild) - 非常快！
 - 🦾 使用 Typescript
 - 📦 组件自动加载
 - 🍍 使用 [pinia](https://pinia.vuejs.org/) 状态管理

@@ -18,7 +18,7 @@
       "vitest",
       "vite/client",
       "vue/ref-macros",
-      "@intlify/vite-plugin-vue-i18n/client"
+      "@intlify/unplugin-vue-i18n/messages"
     ],
     "paths": {
       "~/*": ["src/*"]

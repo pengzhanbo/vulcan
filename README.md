@@ -16,7 +16,7 @@
 
 ## Feature
 
-- ⚡️ [vue 3](https://github.com/vuejs/core), [vite 3](https://github.com/vitejs/vite), [pnpm](https://pnpm.io/), [esbuild](https://github.com/evanw/esbuild) - fast! fast! fast!
+- ⚡️ [vue 3](https://github.com/vuejs/core), [vite 4](https://github.com/vitejs/vite), [pnpm](https://pnpm.io/), [esbuild](https://github.com/evanw/esbuild) - fast! fast! fast!
 - 🦾 Typescript
 - 📦 Component Auto Import
 - 🍍 [pinia](https://pinia.vuejs.org/) - State Management
