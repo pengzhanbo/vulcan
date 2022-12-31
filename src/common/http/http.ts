@@ -33,7 +33,12 @@ export interface HttpResponseOption {
   messageKey?: string
 }
 
-export interface RequestQuery extends Record<string, string | number> {}
+export type RequestQuery<
+  T extends Record<string | number, string | number> = {},
+  K extends keyof T = keyof T
+> = {
+  [P in K]: T[P]
+}
 
 export interface ResponseError extends Error {
   code?: string | number

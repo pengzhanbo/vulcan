@@ -1,7 +1,6 @@
-import type { RequestQuery } from '~/common/http'
 import { request } from '~/common/http'
 
-export interface GetCounterRequest extends RequestQuery {
+export interface GetCounterRequest {
   current: number
 }
 

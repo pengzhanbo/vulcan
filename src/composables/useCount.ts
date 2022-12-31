@@ -1,11 +1,19 @@
+import { useRequest } from './useRequest'
 import { getCounter } from '~/apis'
 
 export const useCount = (initial = 0) => {
-  const count = ref(initial)
+  const { isLoading, data, request } = useRequest(
+    getCounter,
+    { current: initial },
+    { count: initial }
+  )
 
-  const updateCount = async () => {
-    const res = await getCounter({ current: count.value })
-    count.value = res.count
+  const count = computed(() => data.value?.count || initial)
+
+  const updateCount = () => {
+    if (!isLoading.value) {
+      request({ current: count.value })
+    }
   }
 
   return {
