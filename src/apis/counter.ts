@@ -14,5 +14,5 @@ export interface GetCountResponse {
  * @example const result = await getCounter({ current: 1 })
  */
 export const getCounter = request.get<GetCounterRequest, GetCountResponse>(
-  '/counter'
+  '/counter',
 )

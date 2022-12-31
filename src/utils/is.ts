@@ -3,7 +3,7 @@ const toString = Object.prototype.toString
 export const checkType = (val: any): string => toString.call(val).slice(8, -1)
 
 export const isObject = <T extends Record<string, any>>(
-  val: unknown
+  val: unknown,
 ): val is T => checkType(val) === 'Object'
 
 export const isArray = (val: unknown): val is any[] => Array.isArray(val)
@@ -29,7 +29,7 @@ export const isDef = <T = any>(val?: T): val is T => typeof val !== 'undefined'
 
 export const hasOwn = <T extends object, K extends keyof T>(
   val: T,
-  key: K
+  key: K,
 ): key is K => Object.prototype.hasOwnProperty.call(val, key)
 
 export const isHttp = (url: string) => {

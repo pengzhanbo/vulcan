@@ -35,7 +35,7 @@ export interface HttpResponseOption {
 
 export type RequestQuery<
   T extends Record<string | number, string | number> = {},
-  K extends keyof T = keyof T
+  K extends keyof T = keyof T,
 > = {
   [P in K]: T[P]
 }
@@ -50,7 +50,7 @@ export const useAxiosApi = (instance: Axios, subUrl = '') => {
     url = combUrl(subUrl, url)
     return (
       params: Q = Object.create(null),
-      config: AxiosRequestConfig = {}
+      config: AxiosRequestConfig = {},
     ): Promise<T> => {
       return instance.get(url, { params, ...config })
     }
@@ -60,7 +60,7 @@ export const useAxiosApi = (instance: Axios, subUrl = '') => {
     url = combUrl(subUrl, url)
     return (
       params: D = Object.create(null),
-      config: AxiosRequestConfig = {}
+      config: AxiosRequestConfig = {},
     ): Promise<T> => {
       return instance.delete(url, { params, ...config })
     }
@@ -70,7 +70,7 @@ export const useAxiosApi = (instance: Axios, subUrl = '') => {
     url = combUrl(subUrl, url)
     return (
       params: D = Object.create(null),
-      config: AxiosRequestConfig = {}
+      config: AxiosRequestConfig = {},
     ): Promise<T> => {
       return instance.head(url, { params, ...config })
     }
@@ -80,7 +80,7 @@ export const useAxiosApi = (instance: Axios, subUrl = '') => {
     url = combUrl(subUrl, url)
     return (
       data: D = Object.create(null),
-      config: AxiosRequestConfig = {}
+      config: AxiosRequestConfig = {},
     ): Promise<T> => {
       return instance.post(url, data, config)
     }
@@ -90,7 +90,7 @@ export const useAxiosApi = (instance: Axios, subUrl = '') => {
     url = combUrl(subUrl, url)
     return (
       data: D = Object.create(null),
-      config: AxiosRequestConfig = {}
+      config: AxiosRequestConfig = {},
     ): Promise<T> => {
       return instance.put(url, data, config)
     }
@@ -100,7 +100,7 @@ export const useAxiosApi = (instance: Axios, subUrl = '') => {
     url = combUrl(subUrl, url)
     return (
       data: D = Object.create(null),
-      config: AxiosRequestConfig = {}
+      config: AxiosRequestConfig = {},
     ): Promise<T> => {
       return instance.patch(url, data, config)
     }
@@ -121,7 +121,7 @@ export const useHttp = (
     successValue = 100,
     resultKey = 'result',
     messageKey = 'message',
-  }: HttpResponseOption = {}
+  }: HttpResponseOption = {},
 ) => {
   const http = axios.create({
     baseURL,
@@ -155,7 +155,7 @@ export const useHttp = (
         name,
         status: response.status,
       })
-    }
+    },
   )
 
   const api = useAxiosApi(http)

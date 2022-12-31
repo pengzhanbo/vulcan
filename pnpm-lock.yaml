@@ -2,8 +2,8 @@ lockfileVersion: 5.4
 
 specifiers:
   '@intlify/unplugin-vue-i18n': ^0.8.1
-  '@pengzhanbo/eslint-config-vue-ts': ^0.2.10
-  '@pengzhanbo/prettier-config': ^0.2.10
+  '@pengzhanbo/eslint-config-vue-ts': ^0.2.13
+  '@pengzhanbo/prettier-config': ^0.2.13
   '@types/js-cookie': ^3.0.2
   '@types/node': ^18.11.15
   '@types/nprogress': ^0.2.0
@@ -60,8 +60,8 @@ dependencies:
 
 devDependencies:
   '@intlify/unplugin-vue-i18n': 0.8.1_vue-i18n@9.2.2
-  '@pengzhanbo/eslint-config-vue-ts': 0.2.10_lqwc2zjgrlxsq4ydjmen4lphum
-  '@pengzhanbo/prettier-config': 0.2.10_prettier@2.8.1
+  '@pengzhanbo/eslint-config-vue-ts': 0.2.13_lqwc2zjgrlxsq4ydjmen4lphum
+  '@pengzhanbo/prettier-config': 0.2.13_prettier@2.8.1
   '@types/js-cookie': 3.0.2
   '@types/node': 18.11.15
   '@types/nprogress': 0.2.0
@@ -814,8 +814,8 @@ packages:
       vue-i18n:
         optional: true
     dependencies:
-      '@intlify/message-compiler': 9.3.0-beta.10
-      '@intlify/shared': 9.3.0-beta.10
+      '@intlify/message-compiler': 9.3.0-beta.12
+      '@intlify/shared': 9.3.0-beta.12
       jsonc-eslint-parser: 1.4.1
       source-map: 0.6.1
       vue-i18n: 9.2.2_vue@3.2.45
@@ -844,11 +844,11 @@ packages:
       '@intlify/shared': 9.2.2
       source-map: 0.6.1
 
-  /@intlify/message-compiler/9.3.0-beta.10:
-    resolution: {integrity: sha512-RoOC6yceOykLRhN0NlbkNOBUx1el6iphx3W8NfOx3jHVNtfT1FYokx14/5sU3F1F0uxeG4sp6q+ppKvaF8o+ww==}
+  /@intlify/message-compiler/9.3.0-beta.12:
+    resolution: {integrity: sha512-A8/s7pb3v8nf6HG77qFPJntxgQKI9GXxGnkn7aO+b03/X/GkF/4WceDSAIk3i+yLeIgszeBn9GZ23tSg4sTEHA==}
     engines: {node: '>= 14'}
     dependencies:
-      '@intlify/shared': 9.3.0-beta.10
+      '@intlify/shared': 9.3.0-beta.11
       source-map: 0.6.1
     dev: true
 
@@ -856,8 +856,13 @@ packages:
     resolution: {integrity: sha512-wRwTpsslgZS5HNyM7uDQYZtxnbI12aGiBZURX3BTR9RFIKKRWpllTsgzHWvj3HKm3Y2Sh5LPC1r0PDCKEhVn9Q==}
     engines: {node: '>= 14'}
 
-  /@intlify/shared/9.3.0-beta.10:
-    resolution: {integrity: sha512-h93uAanbAt/XgjDHclrVB7xix6r7Uz11wx0iGNOCdHP7aA2LCJjUT3uNbekJjjbo+Fl5jzTSJZdm2SexzoqhRA==}
+  /@intlify/shared/9.3.0-beta.11:
+    resolution: {integrity: sha512-CtbotesxTRiC3bRyXyv1NG39fkqJ790f8z8xFaeIXSZpOdiyxoh5BIyypCzSFQZDGLwz0Q9gyWbW1XpxQJm68Q==}
+    engines: {node: '>= 14'}
+    dev: true
+
+  /@intlify/shared/9.3.0-beta.12:
+    resolution: {integrity: sha512-WsmaS54sA8xuwezPKpa/OMoaX1v2VF2fCgAmYS6prDr2ir0CkUFWPm9A8ilmxzv4nkS61/v8+vf4lGGkn5uBdA==}
     engines: {node: '>= 14'}
     dev: true
 
@@ -877,7 +882,7 @@ packages:
         optional: true
     dependencies:
       '@intlify/bundle-utils': 3.4.0_vue-i18n@9.2.2
-      '@intlify/shared': 9.3.0-beta.10
+      '@intlify/shared': 9.3.0-beta.12
       '@rollup/pluginutils': 4.2.1
       '@vue/compiler-sfc': 3.2.45
       debug: 4.3.4
@@ -974,8 +979,8 @@ packages:
       fastq: 1.13.0
     dev: true
 
-  /@pengzhanbo/eslint-config-basic/0.2.10_4nimuhl3bvnzca6i4meawkwmau:
-    resolution: {integrity: sha512-N19Ks4OIc39IVpfWA4oWs73Z7o/3fZBLF89rnlgE9BvjD/7zbB4WfYx7Gthn/5kZvc5myhct868QNxAEJO7hGQ==}
+  /@pengzhanbo/eslint-config-basic/0.2.13_4nimuhl3bvnzca6i4meawkwmau:
+    resolution: {integrity: sha512-UrFFLsYdfQQCTZ5ya5PxDmkZaf6OFJ+wTUydSFFemgyNnuxiqQCDDknnzZDG3VmI7R89E60tUp8kEqjkvJCURA==}
     peerDependencies:
       eslint: '>=7.4.0'
     dependencies:
@@ -1002,8 +1007,8 @@ packages:
       - supports-color
     dev: true
 
-  /@pengzhanbo/eslint-config-ts/0.2.10_lqwc2zjgrlxsq4ydjmen4lphum:
-    resolution: {integrity: sha512-s6paNUgtiPnNNQYfdYt2NMA7JPBYsP35FEs9Mn3FmrtIJzfJ0Z7i/AbbkOSSYQ8dDPhJ8gRQbBIbgyORnwXJhQ==}
+  /@pengzhanbo/eslint-config-ts/0.2.13_lqwc2zjgrlxsq4ydjmen4lphum:
+    resolution: {integrity: sha512-93v0XidiAj1raKxBpF5tWZGHhSayH4jOxgtMKyCz7l34XL9a6IavPLOtLIHhzdyqb5te7Ahe9KrhSHcpbitX7A==}
     peerDependencies:
       eslint: '>=7.4.0'
       prettier: '>=2.7.1'
@@ -1012,7 +1017,7 @@ packages:
       prettier:
         optional: true
     dependencies:
-      '@pengzhanbo/eslint-config-basic': 0.2.10_4nimuhl3bvnzca6i4meawkwmau
+      '@pengzhanbo/eslint-config-basic': 0.2.13_4nimuhl3bvnzca6i4meawkwmau
       '@typescript-eslint/eslint-plugin': 5.41.0_c3ckxl6ladjstguiv2ijwvbnmq
       '@typescript-eslint/parser': 5.41.0_ha6vam6werchizxrnqvarmz2zu
       eslint: 8.29.0
@@ -1036,14 +1041,14 @@ packages:
       - supports-color
     dev: true
 
-  /@pengzhanbo/eslint-config-vue-ts/0.2.10_lqwc2zjgrlxsq4ydjmen4lphum:
-    resolution: {integrity: sha512-R0JktmaoKZcpTrGn4uTzvAdV93LRQNxK/4S0pcvaDVpWa9XNLDpmnxhqEH4/u65W5K2O0tIx3SGtNSxuo0a6sA==}
+  /@pengzhanbo/eslint-config-vue-ts/0.2.13_lqwc2zjgrlxsq4ydjmen4lphum:
+    resolution: {integrity: sha512-3WnQwfhFKqesASTGNqOSXzK0BA3jVBrTRgq968VIshxxw3LXbDKTsUT1/Ebt4baMQRv563ow9YZvhRNg0MoT6Q==}
     peerDependencies:
       eslint: '>=7.4.0'
       prettier: '>=2.7.1'
     dependencies:
-      '@pengzhanbo/eslint-config-ts': 0.2.10_lqwc2zjgrlxsq4ydjmen4lphum
-      '@pengzhanbo/eslint-config-vue': 0.2.10_2qxeikzma5pyfqcil276zykefu
+      '@pengzhanbo/eslint-config-ts': 0.2.13_lqwc2zjgrlxsq4ydjmen4lphum
+      '@pengzhanbo/eslint-config-vue': 0.2.13_2qxeikzma5pyfqcil276zykefu
       '@typescript-eslint/eslint-plugin': 5.41.0_c3ckxl6ladjstguiv2ijwvbnmq
       '@typescript-eslint/parser': 5.41.0_ha6vam6werchizxrnqvarmz2zu
       eslint: 8.29.0
@@ -1069,13 +1074,13 @@ packages:
       - typescript
     dev: true
 
-  /@pengzhanbo/eslint-config-vue/0.2.10_2qxeikzma5pyfqcil276zykefu:
-    resolution: {integrity: sha512-cRi1EcOEqRNixBPVDPq/Z1Cgn3W6StSb12DWUlSEcsT/qXwlNpxJbcDgcUrjJG1EPwPx//SpYlnaR/DgHJbGnw==}
+  /@pengzhanbo/eslint-config-vue/0.2.13_2qxeikzma5pyfqcil276zykefu:
+    resolution: {integrity: sha512-bKcgsx0LbyWKYViPJJlYqkNwEGsRPk05yVNgTUbkAEdzE3yDDCW8s1PKenuYoOnla/PTwSyPAZIczh5g9rChVw==}
     peerDependencies:
       eslint: '>=7.4.0'
       prettier: '>=2.7.1'
     dependencies:
-      '@pengzhanbo/eslint-config': 0.2.10_2qxeikzma5pyfqcil276zykefu
+      '@pengzhanbo/eslint-config': 0.2.13_2qxeikzma5pyfqcil276zykefu
       eslint: 8.29.0
       eslint-config-prettier: 8.5.0_eslint@8.29.0
       eslint-config-standard: 17.0.0_z37uc75pybcgwooz7qqfdoolsu
@@ -1099,8 +1104,8 @@ packages:
       - supports-color
     dev: true
 
-  /@pengzhanbo/eslint-config/0.2.10_2qxeikzma5pyfqcil276zykefu:
-    resolution: {integrity: sha512-fcHKDAFUn38xCM4vnm5WEDFczbvNd9cMpMoZdxsfkc/vZHy/VCc8/9XeKaWyc4WA5QaeKfeMTsK7E7FxZd8HFw==}
+  /@pengzhanbo/eslint-config/0.2.13_2qxeikzma5pyfqcil276zykefu:
+    resolution: {integrity: sha512-sAFhpRWQVRlYRbpNA8dLnP4rNCXQilrUAvm12bF+uFp2adCD/AEsgmXgG/GfK24RK1AelNTbnhOK7DlD2ER2OA==}
     peerDependencies:
       eslint: '>=7.4.0'
       prettier: '>=2.7.1'
@@ -1108,7 +1113,7 @@ packages:
       prettier:
         optional: true
     dependencies:
-      '@pengzhanbo/eslint-config-basic': 0.2.10_4nimuhl3bvnzca6i4meawkwmau
+      '@pengzhanbo/eslint-config-basic': 0.2.13_4nimuhl3bvnzca6i4meawkwmau
       eslint: 8.29.0
       eslint-config-prettier: 8.5.0_eslint@8.29.0
       eslint-config-standard: 17.0.0_z37uc75pybcgwooz7qqfdoolsu
@@ -1130,8 +1135,8 @@ packages:
       - supports-color
     dev: true
 
-  /@pengzhanbo/prettier-config/0.2.10_prettier@2.8.1:
-    resolution: {integrity: sha512-Mw3EusqTR5ZbuYW0v7rbHs/6aAdOkBDldTmA7yr/1xLjdmTEC4B6O0Y1NFPi+2BaR+A6TgVA8awz+qfxDaovdw==}
+  /@pengzhanbo/prettier-config/0.2.13_prettier@2.8.1:
+    resolution: {integrity: sha512-ND86Ahvzn9gaToGun3ag5GetaUfLrjkoCooZlbdxCvB2wohuLOXCMTf/qbtV04aCYzhBngOazn3JXlXJVNHk0g==}
     peerDependencies:
       prettier: ^2.7.1
     dependencies:

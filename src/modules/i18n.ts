@@ -27,7 +27,7 @@ export const setupI18n = () => {
       () => locale.value,
       (locale) => {
         lang.value = locale
-      }
+      },
     )
   })
 }

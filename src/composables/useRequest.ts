@@ -33,7 +33,7 @@ export interface UseRequestReturn<Q, T, C> {
    */
   request: (
     queryOrParams?: MaybeComputedRef<Q>,
-    config?: MaybeComputedRef<C>
+    config?: MaybeComputedRef<C>,
   ) => Promise<void>
 }
 
@@ -47,12 +47,12 @@ export interface UseRequestReturn<Q, T, C> {
 export function useRequest<
   Q = any,
   T = any,
-  C extends AxiosRequestConfig = AxiosRequestConfig
+  C extends AxiosRequestConfig = AxiosRequestConfig,
 >(
   requestFn: (queryOrParams?: Q, config?: C) => Promise<T>,
   queryOrParams?: MaybeComputedRef<Q>,
   initialData?: MaybeComputedRef<T>,
-  config?: MaybeComputedRef<C & { immediate: boolean }>
+  config?: MaybeComputedRef<C & { immediate: boolean }>,
 ): UseRequestReturn<Q, T, C> {
   const _initData = resolveUnref(initialData)
   const _queryOrParams = resolveUnref(queryOrParams)
@@ -75,7 +75,7 @@ export function useRequest<
 
   const request = async (
     queryOrParams: MaybeComputedRef<Q> = _queryOrParams!,
-    config: MaybeComputedRef<C> = _config! as MaybeComputedRef<C>
+    config: MaybeComputedRef<C> = _config! as MaybeComputedRef<C>,
   ) => {
     const _queryOrParams = resolveUnref(queryOrParams)
     const _config: C = resolveUnref(config) || {}
