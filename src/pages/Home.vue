@@ -20,7 +20,7 @@ const { count, updateCount } = useCount(0)
       count: <span>{{ count }}</span>
     </p>
     <p>
-      <button @click="updateCount">mock请求</button>
+      <button @click="updateCount">{{ t('home.mock') }}</button>
     </p>
   </Card>
 </template>

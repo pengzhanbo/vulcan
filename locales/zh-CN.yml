@@ -4,6 +4,7 @@ home:
   title: 首页
   description: 一个基于vite3 & vue3的项目模板
   linkTo: 跳转到
+  mock: 模拟请求
 
 about:
   title: 关于
