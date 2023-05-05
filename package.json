@@ -45,10 +45,10 @@
   },
   "devDependencies": {
     "@intlify/unplugin-vue-i18n": "^0.10.0",
-    "@pengzhanbo/eslint-config-vue-ts": "^0.3.4",
-    "@pengzhanbo/prettier-config": "^0.3.4",
+    "@pengzhanbo/eslint-config-vue-ts": "^0.3.6",
+    "@pengzhanbo/prettier-config": "^0.3.6",
     "@types/js-cookie": "^3.0.3",
-    "@types/node": "^18.16.3",
+    "@types/node": "^18.16.4",
     "@types/nprogress": "^0.2.0",
     "@vitejs/plugin-legacy": "^4.0.3",
     "@vitejs/plugin-vue": "^4.2.1",
