@@ -27,7 +27,7 @@ export default function vConsolePlugin(enable?: boolean): Plugin {
       if (id === resolveId) {
         enable ??= config.mode === 'development'
         if (enable) {
-          return 'import VConsole from "vconsole"\n\nnew VConsole()'
+          return 'import VConsole from "vconsole";\n\nnew VConsole();'
         } else {
           return ''
         }
