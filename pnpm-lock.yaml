@@ -130,8 +130,8 @@ devDependencies:
     specifier: ^0.7.28
     version: 0.7.28(vite@4.3.8)
   vite-plugin-mock-dev-server:
-    specifier: ^1.1.15
-    version: 1.1.15(vite@4.3.8)
+    specifier: ^1.1.16
+    version: 1.1.16(vite@4.3.8)
   vitest:
     specifier: ^0.31.1
     version: 0.31.1(sass@1.62.1)(terser@5.17.6)
@@ -8160,8 +8160,8 @@ packages:
       - supports-color
     dev: true
 
-  /vite-plugin-mock-dev-server@1.1.15(vite@4.3.8):
-    resolution: {integrity: sha512-5lW18l5EYY4TDhNAV5yZZ1WVDhCFac9OUouRme2DzkRo/y3MLMImDEoeclCtAnTNbvq7dU6IXGsCROCOlto3qQ==}
+  /vite-plugin-mock-dev-server@1.1.16(vite@4.3.8):
+    resolution: {integrity: sha512-NvITEmjoZ6+/26AYm4wBddXr/nNZVPm/HtoPKDSEIcdStILpwnDm5v3XxTkIrrgPAIr6jIQkkd/Z/s6YHBJmAA==}
     engines: {node: ^14.18.0 || >=16}
     peerDependencies:
       vite: '>=3.0.0'
