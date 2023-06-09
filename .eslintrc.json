@@ -1,5 +1,5 @@
 {
-  "extends": ["@pengzhanbo/eslint-config-vue"],
+  "extends": ["@pengzhanbo/eslint-config-vue", "@unocss"],
   "overrides": [
     {
       "files": ["cypress/**/*.spec.*"],
