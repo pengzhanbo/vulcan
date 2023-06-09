@@ -7,28 +7,14 @@ const { increment, decrement } = store
 </script>
 
 <template>
-  <Card class="counter-wrapper" border>
-    <p>
+  <Card class="counter-wrapper p-5" border>
+    <p class="mt-0">
       <span>count: {{ count }}</span>
     </p>
     <p>
       <span>doubleCount: {{ doubleCount }}</span>
     </p>
-    <button class="inc" @click="increment()">+</button>
-    <button class="dec" @click="decrement()">-</button>
+    <button @click="increment()">+</button>
+    <button class="ml-5" @click="decrement()">-</button>
   </Card>
 </template>
-
-<style lang="scss">
-.counter-wrapper {
-  padding: 20px;
-
-  button {
-    font-size: 32px;
-  }
-
-  .dec {
-    margin-left: 18px;
-  }
-}
-</style>

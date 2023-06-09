@@ -9,7 +9,7 @@ const { count, updateCount } = useCount(0)
 <template>
   <HomeHero />
   <Card border>
-    <p>
+    <p class="m-0">
       <span>{{ t('home.linkTo') }}: </span>
       <RouterLink :to="{ name: 'about' }">{{ t('about.title') }}</RouterLink>
     </p>

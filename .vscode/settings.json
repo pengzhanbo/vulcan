@@ -1,11 +1,14 @@
 {
   "cSpell.words": [
+    "Attributify",
+    "eruda",
     "esbuild",
     "intlify",
     "nprogress",
     "pengzhanbo",
     "pinia",
     "pnpm",
+    "unocss",
     "unplugin",
     "vconsole",
     "vueuse"
@@ -14,9 +17,10 @@
   "i18n-ally.keystyle": "nested",
   "i18n-ally.localesPaths": "locales",
   "i18n-ally.sortKeys": true,
-  "prettier.enable": false,
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true
   },
-  "editor.formatOnSave": false
+  "editor.formatOnSave": false,
+  "scss.validate": false,
+  "css.validate": false
 }

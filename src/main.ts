@@ -1,12 +1,11 @@
-import 'virtual:vconsole'
+import 'virtual:eruda'
+import 'uno.css'
+import './styles/index.scss'
 
 import App from './App.vue'
 import { setupModules } from './modules'
 import { router, setupRouter } from './router'
 import { setupStore } from './store'
-
-import 'normalize.css'
-import './styles/index.scss'
 
 async function bootstrap() {
   const app = createApp(App)
@@ -19,4 +18,6 @@ async function bootstrap() {
   app.mount('#app')
 }
 
-bootstrap()
+bootstrap().catch((e) => {
+  console.error(e)
+})

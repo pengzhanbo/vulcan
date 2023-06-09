@@ -40,7 +40,7 @@ const setLocale = (lang: string) => {
   vertical-align: middle;
   display: flex;
 
-  .icon {
+  :deep(.icon) {
     margin: auto;
   }
 }

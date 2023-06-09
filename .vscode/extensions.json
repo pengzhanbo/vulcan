@@ -2,6 +2,7 @@
   "recommendations": [
     "vue.volar",
     "lokalise.i18n-ally",
-    "Vue.vscode-typescript-vue-plugin"
+    "Vue.vscode-typescript-vue-plugin",
+    "antfu.unocss"
   ]
 }

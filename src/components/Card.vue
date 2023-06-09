@@ -1,66 +1,34 @@
 <script lang="ts" setup>
-defineProps({
-  border: {
-    type: Boolean,
-    default: false,
+withDefaults(
+  defineProps<{
+    border?: boolean
+    borderTop?: boolean
+    borderBottom?: boolean
+    title?: string
+  }>(),
+  {
+    border: false,
+    borderTop: false,
+    borderBottom: false,
+    title: '',
   },
-  borderTop: {
-    type: Boolean,
-    default: false,
-  },
-  borderBottom: {
-    type: Boolean,
-    default: false,
-  },
-  title: {
-    type: String,
-    default: '',
-  },
-})
+)
 </script>
 
 <template>
   <div
-    class="card-wrapper"
+    class="box-border w-full px-4 py-4 mb-4 bg-$c-bg-card transition-colors last-of-type:mb-0"
     :class="{
-      'border-t': border || borderTop,
-      'border-b': border || borderBottom,
+      'bb-t': border || borderTop,
+      'bb-b': border || borderBottom,
     }"
   >
     <slot name="title">
-      <h3 v-if="title" class="card-title">{{ title }}</h3>
+      <h3 v-if="title" class="m-0 pb-2 bb-b transition-colors">
+        {{ title }}
+      </h3>
     </slot>
     <slot />
-    <slot name="footer"></slot>
+    <slot name="footer" />
   </div>
 </template>
-
-<style lang="scss" scoped>
-.card-wrapper {
-  box-sizing: border-box;
-  width: 100%;
-  padding: 20px 40px;
-  background-color: var(--c-bg-card);
-  transition: background-color 0.2s ease, border-color 0.2s ease;
-  margin-bottom: 40px;
-
-  &:last-of-type {
-    margin-bottom: 0;
-  }
-
-  .card-title {
-    margin: 0;
-    padding-bottom: 20px;
-    border-bottom: solid 1px var(--c-border);
-    transition: border-color 0.2s ease;
-  }
-
-  &.border-t {
-    border-top: solid 1px var(--c-border);
-  }
-
-  &.border-b {
-    border-bottom: solid 1px var(--c-border);
-  }
-}
-</style>

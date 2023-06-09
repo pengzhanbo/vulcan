@@ -1,19 +1,21 @@
 /// <reference types="vitest" />
 import path from 'node:path'
-import vueI18n from '@intlify/unplugin-vue-i18n/vite'
-import legacy from '@vitejs/plugin-legacy'
-import vue from '@vitejs/plugin-vue'
-import vueJsx from '@vitejs/plugin-vue-jsx'
+import VueI18n from '@intlify/unplugin-vue-i18n/vite'
+import Legacy from '@vitejs/plugin-legacy'
+import Vue from '@vitejs/plugin-vue'
+import VueJsx from '@vitejs/plugin-vue-jsx'
+import UnoCSS from 'unocss/vite'
 import AutoImport from 'unplugin-auto-import/vite'
 import Components from 'unplugin-vue-components/vite'
 import { defineConfig, loadEnv } from 'vite'
-import inspect from 'vite-plugin-inspect'
-import mockDevServer from 'vite-plugin-mock-dev-server'
-import vconsole from './scripts/vite-plugins/vconsole'
+import Inspect from 'vite-plugin-inspect'
+import MockDevServer from 'vite-plugin-mock-dev-server'
+import TsconfigPath from 'vite-tsconfig-paths'
+import Eruda from './scripts/vite-plugins/eruda'
 
 const stringify = JSON.stringify
 
-export default defineConfig(({ mode }) => {
+export default defineConfig(({ mode, command }) => {
   const env = loadEnv(mode, process.cwd(), '')
 
   return {
@@ -22,11 +24,6 @@ export default defineConfig(({ mode }) => {
       __APP_API_URL__: stringify(env.APP_API_URL),
       __APP_FETCH_TIMEOUT__: stringify(env.APP_FETCH_TIMEOUT),
       __IS_DEVELOPMENT__: mode === 'development',
-    },
-    resolve: {
-      alias: {
-        '~/': `${path.resolve(__dirname, 'src')}/`,
-      },
     },
     server: {
       // 接口代理
@@ -39,20 +36,25 @@ export default defineConfig(({ mode }) => {
       },
     },
     plugins: [
-      vue({
+      // https://github.com/aleclarson/vite-tsconfig-paths
+      TsconfigPath(),
+
+      Vue({
         include: [/\.vue$/],
         reactivityTransform: true,
       }),
-      vueJsx(),
 
-      // /scripts/vite-plugin/vconsole.ts
-      vconsole(),
+      VueJsx(),
+
+      // /scripts/vite-plugin/eruda.ts
+      // https://github.com/liriliri/eruda
+      Eruda(),
 
       // https://github.com/pengzhanbo/vite-plugin-mock-dev-server
-      mockDevServer(),
+      MockDevServer(),
 
       // https://github.com/intlify/bundle-tools/blob/main/packages/vite-plugin-vue-i18n/README.md
-      vueI18n({
+      VueI18n({
         runtimeOnly: true,
         compositionOnly: true,
         include: [path.resolve(__dirname, 'locales/**')],
@@ -78,12 +80,14 @@ export default defineConfig(({ mode }) => {
         dts: 'src/components.d.ts',
       }),
 
+      UnoCSS(),
+
       // https://github.com/antfu/vite-plugin-inspect
       // Visit http://localhost:8080/__inspect/ to see the inspector
-      inspect(),
+      command === 'build' && Inspect(),
 
       // 添加 legacy 兼容，如果你的项目只运行于新版本的现代浏览器，则可以删除此插件
-      legacy(),
+      Legacy(),
     ],
     // https://github.com/vitest-dev/vitest
     test: {

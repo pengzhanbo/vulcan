@@ -17,7 +17,7 @@ const toggleMode = () => (isDarkMode.value = !isDarkMode.value)
   display: flex;
   margin-left: 20px;
 
-  .icon {
+  > :deep(.icon) {
     margin: auto;
   }
 }

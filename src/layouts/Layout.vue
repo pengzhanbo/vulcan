@@ -1,16 +1,8 @@
 <template>
   <div id="app">
     <Navbar />
-    <div class="container">
+    <div class="box-border min-h-100vh pt-$navbar-height">
       <slot />
     </div>
   </div>
 </template>
-
-<style lang="scss">
-.container {
-  box-sizing: border-box;
-  min-height: 100vh;
-  padding-top: var(--navbar-height);
-}
-</style>

@@ -4,16 +4,9 @@ const { t } = useI18n()
 
 <template>
   <Card border-bottom>
-    <h3 class="home-hero-title">{{ t('productName') }}</h3>
-    <p class="home-hero-description">{{ t('home.description') }}</p>
+    <h3 class="text-$c-brand text-7xl font-900 my-5">
+      {{ t('productName') }}
+    </h3>
+    <p class="m-0">{{ t('home.description') }}</p>
   </Card>
 </template>
-
-<style lang="scss" scoped>
-.home-hero-title {
-  color: var(--c-brand);
-  font-size: 98px;
-  font-weight: 900;
-  margin-bottom: 40px;
-}
-</style>
