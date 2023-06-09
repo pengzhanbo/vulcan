@@ -7,14 +7,14 @@ import type { Plugin, ResolvedConfig } from 'vite'
  *
  * 在 `enable` 为 `false` 时，引用注入是一个无内容的 virtual模块
  *
- * @param enable 是否注入 vconsole, 默认仅在 development 下注入
+ * @param enable 是否注入 eruda, 默认仅在 development 下注入
  */
 export default function vConsolePlugin(enable?: boolean): Plugin {
-  const moduleId = 'virtual:vconsole'
+  const moduleId = 'virtual:eruda'
   const resolveId = `\0${moduleId}`
   let config: ResolvedConfig
   return {
-    name: 'vite-plugin-vconsole',
+    name: 'vite-plugin-eruda',
     configResolved(_config) {
       config = _config
     },
@@ -27,9 +27,7 @@ export default function vConsolePlugin(enable?: boolean): Plugin {
       if (id === resolveId) {
         enable ??= config.mode === 'development'
         if (enable) {
-          return 'import VConsole from "vconsole";\n\nnew VConsole();'
-        } else {
-          return ''
+          return 'import eruda from "eruda";\n\neruda.init();'
         }
       }
     },
