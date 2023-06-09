@@ -7,18 +7,7 @@ const toggleMode = () => (isDarkMode.value = !isDarkMode.value)
 </script>
 
 <template>
-  <div class="toggle-class-mode" @click="toggleMode()">
+  <div class="flex ml-2 text-xl" @click="toggleMode()">
     <component :is="isDarkMode ? ThemeDarkIcon : ThemeLightIcon" />
   </div>
 </template>
-
-<style lang="scss" scoped>
-.toggle-class-mode {
-  display: flex;
-  margin-left: 20px;
-
-  > :deep(.icon) {
-    margin: auto;
-  }
-}
-</style>

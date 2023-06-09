@@ -15,7 +15,7 @@ export default function presetRemToVw(options: Options = {}): Preset {
   const { fontSize = 16, viewportWidth = 750, precision = 5 } = options
 
   return {
-    name: '@unocss/preset-rem-to-vw',
+    name: '@unocss/preset-unit-to-vw',
     postprocess: (util) => {
       util.entries.forEach((rule) => {
         const value = rule[1]

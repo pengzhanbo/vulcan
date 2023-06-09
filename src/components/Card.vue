@@ -19,12 +19,12 @@ withDefaults(
   <div
     class="box-border w-full px-4 py-4 mb-4 bg-$c-bg-card transition-colors last-of-type:mb-0"
     :class="{
-      'bb-t': border || borderTop,
-      'bb-b': border || borderBottom,
+      'border-t': border || borderTop,
+      'border-b': border || borderBottom,
     }"
   >
     <slot name="title">
-      <h3 v-if="title" class="m-0 pb-2 bb-b transition-colors">
+      <h3 v-if="title" class="m-0 pb-2 border-b transition-colors">
         {{ title }}
       </h3>
     </slot>

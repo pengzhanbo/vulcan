@@ -2,43 +2,23 @@
 const { title } = setupNavbar()
 
 const router = useRouter()
-const goBack = () => {
-  router.back()
-}
+const goBack = () => router.back()
 </script>
 
 <template>
-  <nav class="navbar-wrapper bb-b">
-    <span class="navbar-back" @click="goBack">
+  <nav
+    class="fixed-0 flex-center w-full h-$navbar-height bg-$c-bg-navbar transition-colors border-b"
+  >
+    <span
+      class="navbar-back flex h-full py-0 px-2 text-2xl text-$c-icon transition-colors"
+      @click="goBack"
+    >
       <ArrowLeftIcon />
     </span>
-    <h2 class="navbar-title">{{ title }}</h2>
-    <div class="navbar-right">
+    <h2 class="flex-1 text-36px px-2 py-0">{{ title }}</h2>
+    <div class="flex items-center pr-4">
       <ToggleLanguage />
       <ToggleDarkMode />
     </div>
   </nav>
 </template>
-
-<style lang="scss" scoped>
-.navbar-wrapper {
-  @apply fixed top-0 left-0 flex justify-center items-center w-full h-$navbar-height;
-  @apply bg-$c-bg-navbar transition-colors;
-}
-
-.navbar-back {
-  @apply flex h-full py-0 px-2 text-2xl text-$c-icon transition-colors;
-
-  > :deep(.icon) {
-    margin: auto;
-  }
-}
-
-.navbar-title {
-  @apply flex-1 text-36px px-2 py-0;
-}
-
-.navbar-right {
-  @apply flex items-center pr-4;
-}
-</style>

@@ -7,7 +7,7 @@ const { increment, decrement } = store
 </script>
 
 <template>
-  <Card class="counter-wrapper p-5" border>
+  <Card class="p-5" border>
     <p class="mt-0">
       <span>count: {{ count }}</span>
     </p>
