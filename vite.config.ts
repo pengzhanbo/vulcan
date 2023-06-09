@@ -1,7 +1,6 @@
 /// <reference types="vitest" />
 import path from 'node:path'
 import VueI18n from '@intlify/unplugin-vue-i18n/vite'
-import Legacy from '@vitejs/plugin-legacy'
 import Vue from '@vitejs/plugin-vue'
 import VueJsx from '@vitejs/plugin-vue-jsx'
 import UnoCSS from 'unocss/vite'
@@ -57,6 +56,7 @@ export default defineConfig(({ mode, command }) => {
       VueI18n({
         runtimeOnly: true,
         compositionOnly: true,
+        fullInstall: true,
         include: [path.resolve(__dirname, 'locales/**')],
       }),
 
@@ -85,9 +85,6 @@ export default defineConfig(({ mode, command }) => {
       // https://github.com/antfu/vite-plugin-inspect
       // Visit http://localhost:8080/__inspect/ to see the inspector
       command === 'build' && Inspect(),
-
-      // 添加 legacy 兼容，如果你的项目只运行于新版本的现代浏览器，则可以删除此插件
-      Legacy(),
     ],
     // https://github.com/vitest-dev/vitest
     test: {

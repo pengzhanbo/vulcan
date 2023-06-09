@@ -1,14 +1,12 @@
 import {
   defineConfig,
+  presetTypography,
   presetUno,
-  transformerCompileClass,
   transformerDirectives,
   transformerVariantGroup,
 } from 'unocss'
 import type { Theme } from 'unocss/preset-mini'
 import presetUnitToVw from './scripts/unocss/preset-unit-to-vw'
-
-const remRE = /(-?[\.\d]+)rem/g
 
 export default defineConfig({
   shortcuts: {
@@ -20,6 +18,8 @@ export default defineConfig({
     'flex-center': 'flex justify-center items-center',
     'fixed-0': 'fixed top-0 left-0',
     'icon': 'w-1em h-1em text-1em vertical-middle leading-1em m-auto',
+    'btn':
+      'px-4 py-1 rounded inline-block bg-teal-700 text-white cursor-pointer !outline-none hover:bg-teal-800 disabled:cursor-default disabled:bg-gray-600 disabled:opacity-50',
   },
   theme: {
     colors: {
@@ -30,12 +30,11 @@ export default defineConfig({
     },
   } as Theme,
   presets: [
+    // https://unocss.dev/presets/uno
     presetUno(),
+    // https://unocss.dev/presets/typography
+    presetTypography(),
     presetUnitToVw({ fontSize: 32, viewportWidth: 750, precision: 5 }),
   ],
-  transformers: [
-    transformerCompileClass(),
-    transformerDirectives(),
-    transformerVariantGroup(),
-  ],
+  transformers: [transformerDirectives(), transformerVariantGroup()],
 })

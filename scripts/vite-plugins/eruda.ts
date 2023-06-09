@@ -15,6 +15,7 @@ export default function vConsolePlugin(enable?: boolean): Plugin {
   let config: ResolvedConfig
   return {
     name: 'vite-plugin-eruda',
+    enforce: 'pre',
     configResolved(_config) {
       config = _config
     },
@@ -27,8 +28,11 @@ export default function vConsolePlugin(enable?: boolean): Plugin {
       if (id === resolveId) {
         enable ??= config.mode === 'development'
         if (enable) {
-          return 'import eruda from "eruda";\n\neruda.init();'
+          return {
+            code: 'import eruda from "eruda";\n\neruda.init();',
+          }
         }
+        return ''
       }
     },
   }

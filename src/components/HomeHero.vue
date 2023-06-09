@@ -4,7 +4,7 @@ const { t } = useI18n()
 
 <template>
   <Card border-bottom>
-    <h3 class="text-brand text-7xl font-900 my-5">
+    <h3 class="my-5 text-7xl font-900 text-brand">
       {{ t('productName') }}
     </h3>
     <p class="m-0">{{ t('home.description') }}</p>

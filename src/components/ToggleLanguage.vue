@@ -21,10 +21,10 @@ const setLocale = (lang: string) => {
     <Transition name="fade">
       <div
         v-show="show"
-        class="fixed-0 flex w-full h-full z-20 bg-$c-bg-mask"
+        class="fixed-0 z-20 h-full w-full flex bg-$c-bg-mask"
         @click.self="hide"
       >
-        <ul class="m-auto bg-$c-bg-card w-3/4 py-4 px-5 list-none rounded-md">
+        <ul class="m-auto w-3/4 list-none rounded-md bg-$c-bg-card px-5 py-4">
           <li
             v-for="lang in languageList"
             :key="lang.value"

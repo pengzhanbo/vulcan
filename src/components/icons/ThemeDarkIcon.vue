@@ -3,7 +3,7 @@
     xmlns="http://www.w3.org/2000/svg"
     xmlns:xlink="http://www.w3.org/1999/xlink"
     viewBox="0 0 20 20"
-    class="icon icon-theme-dark"
+    class="icon-theme-dark icon"
   >
     <g fill="none">
       <path

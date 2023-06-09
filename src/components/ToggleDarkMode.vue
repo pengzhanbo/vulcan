@@ -7,7 +7,7 @@ const toggleMode = () => (isDarkMode.value = !isDarkMode.value)
 </script>
 
 <template>
-  <div class="flex ml-2 text-xl" @click="toggleMode()">
+  <div class="ml-2 flex text-xl" @click="toggleMode()">
     <component :is="isDarkMode ? ThemeDarkIcon : ThemeLightIcon" />
   </div>
 </template>

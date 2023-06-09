@@ -14,7 +14,7 @@ const { increment, decrement } = store
     <p>
       <span>doubleCount: {{ doubleCount }}</span>
     </p>
-    <button @click="increment()">+</button>
-    <button class="ml-5" @click="decrement()">-</button>
+    <button class="inc btn" @click="increment()">+</button>
+    <button class="dec ml-5 btn" @click="decrement()">-</button>
   </Card>
 </template>
