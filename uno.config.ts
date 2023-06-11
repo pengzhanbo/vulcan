@@ -1,6 +1,5 @@
 import {
   defineConfig,
-  presetTypography,
   presetUno,
   transformerDirectives,
   transformerVariantGroup,
@@ -32,8 +31,6 @@ export default defineConfig({
   presets: [
     // https://unocss.dev/presets/uno
     presetUno(),
-    // https://unocss.dev/presets/typography
-    presetTypography(),
     presetUnitToVw({ fontSize: 32, viewportWidth: 750, precision: 5 }),
   ],
   transformers: [transformerDirectives(), transformerVariantGroup()],
