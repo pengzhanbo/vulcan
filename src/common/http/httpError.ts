@@ -1,6 +1,9 @@
-export interface HttpError extends ErrorOptions {
+export interface HttpErrorOptions extends ErrorOptions {
   code?: string | number
   status?: string | number
+  stack?: any
+  message: string
+  name?: string
 }
 
 /**
@@ -11,11 +14,12 @@ export interface HttpError extends ErrorOptions {
 export class HttpError extends Error {
   code?: string | number
   status?: string | number
-  constructor({ message, code, status, stack, cause }: HttpError) {
+  constructor({ message, code, status, stack, cause, name }: HttpErrorOptions) {
     super(message)
     this.code = code
     this.status = status
     this.stack = stack || this.stack
     this.cause = cause || this.cause
+    this.name = name || this.name
   }
 }
