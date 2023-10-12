@@ -5,13 +5,20 @@ export interface GetCounterRequest {
 }
 
 export interface GetCountResponse {
-  count: number
+  code: number
+  message: string
+  result: {
+    count: number
+  }
 }
 
 /**
  * 通过注释，描述接口的功能
  *
- * @example const result = await getCounter({ current: 1 })
+ * @example
+ * ```ts
+ * const result = await getCounter({ current: 1 })
+ * ```
  */
 export const getCounter = request.get<GetCounterRequest, GetCountResponse>(
   '/counter',

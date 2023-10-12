@@ -1,7 +1,6 @@
 import type { MaybeRefOrGetter } from '@vueuse/core'
 import type { AxiosRequestConfig } from 'axios'
 import type { ComputedRef, Ref } from 'vue'
-import type { HttpError } from '../common/http/httpError'
 
 export interface UseRequestReturn<Q, T, C> {
   /**
@@ -17,7 +16,7 @@ export interface UseRequestReturn<Q, T, C> {
   /**
    * 请求失败时错误信息
    */
-  error: Ref<HttpError | null>
+  error: Ref<Error | null>
   /**
    * 是否可以中断请求
    */
@@ -60,7 +59,7 @@ export function useRequest<
 
   const isLoading = ref(false)
   const data = shallowRef<T | null>(_initData || null)
-  const error = shallowRef<HttpError | null>(null)
+  const error = shallowRef<Error | null>(null)
 
   const supportAbort = typeof AbortController === 'function'
   const canAbort = computed(() => supportAbort && isLoading.value)
@@ -88,7 +87,7 @@ export function useRequest<
       data.value = response
       isLoading.value = false
     } catch (e: any) {
-      error.value = e as HttpError
+      error.value = e as Error
       isLoading.value = false
     }
   }

@@ -5,10 +5,10 @@ export const useCount = (initial = 0) => {
   const { isLoading, data, request } = useRequest(
     getCounter,
     { current: initial },
-    { count: initial },
+    { result: { count: initial }, code: 200, message: '' },
   )
 
-  const count = computed(() => data.value?.count || initial)
+  const count = computed(() => data.value?.result.count || initial)
 
   const updateCount = () => {
     if (!isLoading.value) {

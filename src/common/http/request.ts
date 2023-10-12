@@ -13,4 +13,4 @@ export const request = useHttp(__APP_API_URL__, {
  * 可以通过实例自定义其他的内容
  */
 // 添加 拦截器
-// request.http.interceptors.response.use((response) => response)
+// request.http.interceptors.response.use((response) => response.data)

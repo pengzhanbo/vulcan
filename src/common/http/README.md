@@ -15,9 +15,12 @@ const fetchPostList = request.post<
     page: number
   },
   {
-    title: string
-    content: string
-    author: string
+    code: 200
+    result: {
+      title: string
+      content: string
+      author: string
+    }
   }[]
 >('/post/list')
 
