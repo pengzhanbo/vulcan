@@ -1,0 +1,93 @@
+.flex {
+  display: flex;
+}
+
+.flex-1 {
+  flex: 1;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.flex-center {
+  justify-content: center;
+  align-items: center;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.m-0 {
+  margin: 0;
+}
+
+.m-auto {
+  margin: auto;
+}
+
+.mx-auto {
+  margin: 0 auto;
+}
+
+.ml-2 {
+  margin-left: 8px;
+}
+
+.text-sm {
+  font-size: 12px;
+}
+
+.text-basic {
+  font-size: 16px;
+}
+
+.text-xl {
+  font-size: 20px;
+}
+
+.text-2xl {
+  font-size: 24px;
+}
+
+.text-brand {
+  color: var(--c-brand);
+}
+
+.relative {
+  position: relative;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.fixed {
+  position: fixed;
+}
+
+.icon {
+  width: 1em;
+  height: 1em;
+  font-size: 1em;
+  vertical-align: middle;
+}
+
+.transition-colors {
+  transition-property: background-color, border-color, color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.transition-opacity {
+  transition-property: opacity;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.transition {
+  transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}

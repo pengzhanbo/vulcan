@@ -1,12 +1,12 @@
 const title = ref('')
 
-export const setupNavbar = () => {
+export function setupNavbar() {
   return { title }
 }
 
-export const useNavbar = (_title?: string) => {
-  if (_title) {
+export function useNavbar(_title?: string) {
+  if (_title)
     title.value = _title
-  }
+
   return { title }
 }

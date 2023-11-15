@@ -3,7 +3,7 @@ import type { App } from 'vue'
 import { createI18n } from 'vue-i18n'
 import { DEFAULT_LANGUAGE } from '~/common'
 
-export const installI18n = (app: App) => {
+export function installI18n(app: App) {
   const i18n = createI18n({
     legacy: false,
     locale: DEFAULT_LANGUAGE,
@@ -14,20 +14,16 @@ export const installI18n = (app: App) => {
   app.use(i18n)
 }
 
-export const setupI18n = () => {
+export function setupI18n() {
   const lang = useLocalStorage('vulcan-locale', DEFAULT_LANGUAGE)
   const { locale } = useI18n()
 
   onMounted(() => {
-    if (locale.value !== lang.value) {
+    if (locale.value !== lang.value)
       locale.value = lang.value
-    }
+  })
 
-    watch(
-      () => locale.value,
-      (locale) => {
-        lang.value = locale
-      },
-    )
+  watch(locale, (locale) => {
+    lang.value = locale
   })
 }

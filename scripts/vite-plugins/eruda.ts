@@ -20,9 +20,8 @@ export default function vConsolePlugin(enable?: boolean): Plugin {
       config = _config
     },
     resolveId(id) {
-      if (id === moduleId) {
+      if (id === moduleId)
         return resolveId
-      }
     },
     load(id) {
       if (id === resolveId) {

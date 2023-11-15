@@ -8,7 +8,7 @@ export default defineMock({
       code: 100,
       message: 'success',
       result: {
-        count: parseInt(query.current || 0) + 1,
+        count: Number.parseInt(query.current || 0) + 1,
       },
     }
   },

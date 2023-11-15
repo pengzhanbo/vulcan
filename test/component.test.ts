@@ -3,7 +3,7 @@ import { createPinia, setActivePinia } from 'pinia'
 import { beforeEach, describe, expect, it } from 'vitest'
 import Counter from '../src/components/Counter.vue'
 
-describe('Counter.vue', () => {
+describe('counter.vue', () => {
   beforeEach(() => {
     setActivePinia(createPinia())
   })

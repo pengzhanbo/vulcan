@@ -2,8 +2,8 @@ import cookie from 'js-cookie'
 
 /**
  * example
- * @returns
+ * @returns boolean
  */
-export const isLogin = (): boolean => {
+export function isLogin(): boolean {
   return Boolean(cookie.get('token'))
 }

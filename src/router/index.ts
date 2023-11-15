@@ -8,7 +8,7 @@ export const router = createRouter({
   routes,
 })
 
-export const setupRouter = (app: App) => {
+export function setupRouter(app: App) {
   app.use(router)
   setupGlobalGuards(router)
 }

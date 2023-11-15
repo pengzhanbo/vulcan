@@ -3,13 +3,13 @@ import axios from 'axios'
 import { combUrl } from '~/utils'
 
 export type RequestQuery<
-  T extends Record<string | number, string | number> = {},
+  T extends object = object,
   K extends keyof T = keyof T,
 > = {
   [P in K]: T[P]
 }
 
-export const useAxiosApi = (instance: Axios, subUrl = '') => {
+export function useAxiosApi(instance: Axios, subUrl = '') {
   const get = <Q extends RequestQuery, T = any>(url: string) => {
     url = combUrl(subUrl, url)
     return (
@@ -77,17 +77,12 @@ export const useAxiosApi = (instance: Axios, subUrl = '') => {
   return { get, delete: del, head, post, put, patch, create }
 }
 
-export const useHttp = (
-  baseURL = __APP_API_URL__,
-  config: CreateAxiosDefaults = {},
-) => {
+export function useHttp(baseURL = '', config: CreateAxiosDefaults = {}) {
   const http = axios.create({
     baseURL,
-    timeout: __APP_FETCH_TIMEOUT__,
+    timeout: import.meta.env.VITE_APP_FETCH_TIMEOUT,
     ...config,
   })
-
-  http.interceptors.response.use((response) => response.data)
 
   const api = useAxiosApi(http)
 

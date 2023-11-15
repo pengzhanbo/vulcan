@@ -1,6 +1,7 @@
 <script lang="ts" setup>
-import { setupI18n } from './modules'
+import { setupDarkMode } from '~/composables'
 import Layout from '~/layouts/Layout.vue'
+import { setupI18n } from '~/modules'
 
 setupDarkMode()
 setupI18n()

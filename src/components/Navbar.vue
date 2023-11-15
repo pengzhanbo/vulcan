@@ -1,4 +1,9 @@
 <script lang="ts" setup>
+import ArrowLeftIcon from './icons/ArrowLeftIcon.vue'
+import ToggleDarkMode from './ToggleDarkMode.vue'
+import ToggleLanguage from './ToggleLanguage.vue'
+import { setupNavbar } from '~/composables'
+
 const { title } = setupNavbar()
 
 const router = useRouter()
@@ -6,19 +11,50 @@ const goBack = () => router.back()
 </script>
 
 <template>
-  <nav
-    class="fixed-0 h-$navbar-height w-full flex-center border-b bg-$c-bg-navbar transition-colors"
-  >
-    <span
-      class="navbar-back h-full flex px-2 py-0 text-2xl text-$c-icon transition-colors"
-      @click="goBack"
-    >
-      <ArrowLeftIcon />
+  <nav class="navbar-wrapper flex flex-center transition-colors">
+    <span class="navbar-back flex transition-colors" @click="goBack">
+      <ArrowLeftIcon class="m-auto" />
     </span>
-    <h2 class="flex-1 px-2 py-0 text-36px">{{ title }}</h2>
-    <div class="flex items-center pr-4">
+    <h2 class="navbar-title flex-1">
+      {{ title }}
+    </h2>
+    <div class="navbar-icons flex items-center">
       <ToggleLanguage />
-      <ToggleDarkMode />
+      <ToggleDarkMode class="ml-2" />
     </div>
   </nav>
 </template>
+
+<style lang="scss">
+.navbar-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 20;
+  width: 100%;
+  height: var(--navbar-height);
+  background-color: var(--c-bg-navbar);
+  border-bottom: solid 1px var(--c-border);
+
+  .navbar-back {
+    height: 100%;
+    padding: 0 8px;
+    font-size: 20px;
+    line-height: 32px;
+    color: var(--c-icon);
+  }
+
+  .navbar-title {
+    padding: 0 8px;
+    font-size: 20px;
+  }
+
+  .navbar-icons {
+    padding-right: 16px;
+  }
+
+  .ml-2 {
+    margin-left: 8px;
+  }
+}
+</style>
