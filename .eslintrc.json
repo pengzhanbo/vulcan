@@ -1,9 +1,0 @@
-{
-  "extends": ["@pengzhanbo/eslint-config-vue", "@unocss"],
-  "overrides": [
-    {
-      "files": ["cypress/**/*.spec.*"],
-      "extends": ["plugin:cypress/recommended"]
-    }
-  ]
-}

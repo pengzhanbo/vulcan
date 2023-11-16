@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import { storeToRefs } from 'pinia'
+import Card from './Card.vue'
+import { useDemoStore } from '~/stores'
 
 const store = useDemoStore()
 const { count, doubleCount } = storeToRefs(store)
@@ -14,7 +15,46 @@ const { increment, decrement } = store
     <p>
       <span>doubleCount: {{ doubleCount }}</span>
     </p>
-    <button class="inc btn" @click="increment()">+</button>
-    <button class="dec ml-5 btn" @click="decrement()">-</button>
+    <button class="inc btn" @click="increment()">
+      +
+    </button>
+    <button class="dec ml-5 btn" @click="decrement()">
+      -
+    </button>
   </Card>
 </template>
+
+<style lang="scss">
+.p-5 {
+  padding: 20px;
+}
+
+.mt-0 {
+  margin-top: 0;
+}
+
+.ml-5 {
+  margin-left: 20px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 0.25rem;
+  border: none;
+  color: rgba(255, 255, 255, 1);
+  background-color: rgba(15, 118, 110, 1);
+  cursor: pointer;
+  outline: 2px solid transparent !important;
+  outline-offset: 2px !important;
+
+  &:hover {
+    background-color: rgba(17, 94, 89, 1);
+  }
+
+  &:disabled {
+    cursor: default;
+    opacity: 0.5;
+  }
+}
+</style>

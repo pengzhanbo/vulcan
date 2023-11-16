@@ -1,10 +1,5 @@
-productName: Vulcan
-
 home:
   title: Home
   description: A Template for vite3 & vue3
   linkTo: linkTo
   mock: mock request
-
-about:
-  title: About
