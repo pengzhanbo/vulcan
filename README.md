@@ -1,19 +1,13 @@
 # Vulcan
 
 <p align="center">
-  <img src="https://github.com/pengzhanbo/vulcan/raw/master/public/logo.png" />
+  <img src="https://github.com/pengzhanbo/vulcan/tree/main/public/logo.png" />
 </p>
 
 <p align="center">🚀🚀一个基于 vite + vue3 的项目模板，帮助快速创建 Mobile Web 应用。🚀🚀</p>
 <br>
 <p align="center">
   <a href="https://vulcan-vue.netlify.app/">在线案例</a>
-</p>
-<br>
-<p align="center">
-  <a href="/README.en-US.md"> English </a>
-  <span> | </span>
-  <span> 中文 </span>
 </p>
 <br>
 <br>
