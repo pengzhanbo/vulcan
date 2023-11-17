@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { getTodoList } from '~/services/todo-list'
 
-const data = ref<{ id: number; name: string }[]>([])
+const data = ref<{ id: number, name: string }[]>([])
 
 onBeforeMount(async () => {
   const [res] = await getTodoList()
