@@ -2,7 +2,7 @@ import { defineMock } from 'vite-plugin-mock-dev-server'
 
 export default defineMock({
   url: '/api/todo/list',
-  body: {
+  body: () => ({
     code: 100,
     message: 'success',
     result: [
@@ -12,5 +12,5 @@ export default defineMock({
       { id: 4, name: 'todo4' },
       { id: 5, name: 'todo5' },
     ],
-  },
+  }),
 })

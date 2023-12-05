@@ -5,9 +5,8 @@ import HomeHero from '~/components/HomeHero.vue'
 import TodoList from '~/components/TodoList.vue'
 import { useCount, useNavbar } from '~/composables'
 
-const { t, locale } = useI18n()
-const { title } = useNavbar()
-watch(locale, () => (title.value = t('home.title')), { immediate: true })
+const { t } = useI18n()
+useNavbar({ title: () => t('home.title') })
 
 const { count, updateCount } = useCount(0)
 </script>

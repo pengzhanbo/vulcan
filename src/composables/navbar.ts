@@ -1,12 +1,39 @@
-const title = ref('')
+import type { MaybeRefOrGetter } from 'vue'
 
-export function setupNavbar() {
-  return { title }
+const titleRef = ref('')
+
+export function setupNavbar(defaultTitle?: string) {
+  const _title = defaultTitle ?? document.title
+  titleRef.value = _title ?? ''
+
+  return { title: titleRef }
 }
 
-export function useNavbar(_title?: string) {
-  if (_title)
-    title.value = _title
+export interface NavbarOptions {
+  title?: MaybeRefOrGetter<string>
+}
 
-  return { title }
+export function useNavbar(options: NavbarOptions = {}) {
+  const { title } = options
+
+  const { locale } = useI18n()
+
+  if (title) {
+    if (typeof title === 'string') {
+      titleRef.value = title
+    }
+    else {
+      const unwatch = watch(
+        locale,
+        () => (titleRef.value = toValue(title)),
+        { immediate: true },
+      )
+
+      tryOnScopeDispose(unwatch)
+    }
+  }
+
+  return {
+    title: titleRef,
+  }
 }
