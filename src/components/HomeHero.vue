@@ -56,7 +56,7 @@ onMounted(() => {
   filter: url('#filter');
 
   span {
-    color: #FF6600;
+    color: #ff6600;
     background: linear-gradient(#fff, #999, #ddd, #888);
     background-clip: text;
     animation: blurChange 2s ease-out forwards;
