@@ -3,7 +3,7 @@
   "type": "module",
   "version": "0.0.0",
   "private": true,
-  "packageManager": "pnpm@8.13.1",
+  "packageManager": "pnpm@8.14.0",
   "engines": {
     "node": "^18.0.0 || >=20"
   },
@@ -27,7 +27,7 @@
     "normalize.css": "^8.0.1",
     "nprogress": "^0.2.0",
     "pinia": "^2.1.7",
-    "vue": "^3.4.3",
+    "vue": "^3.4.4",
     "vue-i18n": "^9.8.0",
     "vue-router": "^4.2.5"
   },
@@ -54,10 +54,10 @@
     "eslint-plugin-format": "^0.1.0",
     "husky": "^8.0.3",
     "lint-staged": "^15.2.0",
-    "pnpm": "^8.13.1",
+    "pnpm": "^8.14.0",
     "postcss": "^8.4.32",
     "postcss-px-to-viewport-8-plugin": "^1.2.3",
-    "sass": "^1.69.6",
+    "sass": "^1.69.7",
     "sort-package-json": "^2.6.0",
     "terser": "^5.26.0",
     "typescript": "^5.3.3",
