@@ -5,7 +5,7 @@ import { fetchTodoList } from '~/apis'
  * 获取待办列表
  */
 export const getTodoList = createService(async () => {
-  const { code, message, result } = await fetchTodoList()
+  const { code, message, result = [] } = await fetchTodoList()
   if (code !== 100)
     throw new Error(message)
 

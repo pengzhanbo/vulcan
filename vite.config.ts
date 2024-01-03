@@ -31,9 +31,7 @@ export default defineConfig(({ mode, command }) => {
       // https://github.com/aleclarson/vite-tsconfig-paths
       TsconfigPath(),
 
-      Vue({
-        reactivityTransform: true,
-      }),
+      Vue(),
 
       VueJsx(),
 
