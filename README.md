@@ -46,7 +46,7 @@
 
 ### 编码风格
 
-- [eslint](https://eslint.org) - 使用 [@antfu/eslint-config]() 配置， 单引号，无分号
+- [eslint](https://eslint.org) - 使用 [@antfu/eslint-config](https://github.com/antfu/eslint-config) 配置， 单引号，无分号
 - 使用 `<script setup>` SFC 语法
 
 ### 工具
@@ -59,7 +59,7 @@
 - [postcss](https://postcss.org/), [sass](https://github.com/sass/dart-sass) 处理 CSS
   - [autoprefixer](https://github.com/postcss/autoprefixer)
 
-## 试试！
+## 试试
 
 > vulcan 需要 node 版本 >= 14.18
 
