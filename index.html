@@ -11,9 +11,7 @@
     <title>Vulcan</title>
     <script>
       ;(function () {
-        const prefersDark =
-          window.matchMedia &&
-          window.matchMedia('(prefers-color-scheme: dark)').matches
+        const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
         const setting = localStorage.getItem('vulcan-color-scheme') || 'auto'
         if (setting === 'dark' || (prefersDark && setting !== 'light'))
           document.documentElement.classList.toggle('dark', true)
@@ -23,9 +21,6 @@
   <body>
     <div id="app"></div>
     <script type="module" src="/src/main.ts"></script>
-    <noscript
-      >This website requires JavaScript to function properly. Please enable
-      JavaScript to continue.</noscript
-    >
+    <noscript>This website requires JavaScript to function properly. Please enable JavaScript to continue.</noscript>
   </body>
 </html>

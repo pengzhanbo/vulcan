@@ -5,7 +5,8 @@ const data = ref<{ id: number, name: string }[]>([])
 
 onBeforeMount(async () => {
   const [res] = await getTodoList()
-  res && (data.value = res)
+  if (res)
+    data.value = res
 })
 </script>
 

@@ -8,7 +8,7 @@ export function isObject<T extends Record<string, any>>(val: unknown): val is T 
 
 export const isArray = (val: unknown): val is any[] => Array.isArray(val)
 
-export function isFunction<T extends Function>(val: any): val is T {
+export function isFunction<T extends () => any>(val: any): val is T {
   return typeof val === 'function'
 }
 
@@ -35,5 +35,5 @@ export function hasOwn<T extends object, K extends keyof T>(val: T, key: K): key
 }
 
 export function isHttp(url: string) {
-  return /^(https?:)?\/\//i.test(url)
+  return /^(?:https?:)?\/\//i.test(url)
 }
