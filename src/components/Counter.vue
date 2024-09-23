@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import Card from './Card.vue'
 import { useDemoStore } from '~/stores'
+import Card from './Card.vue'
 
 const store = useDemoStore()
 const { count, doubleCount } = storeToRefs(store)

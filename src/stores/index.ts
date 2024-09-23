@@ -1,3 +1,3 @@
-export * from './store'
-
 export * from './demo'
+
+export * from './store'

@@ -1,5 +1,5 @@
-import createService from '~/modules/createService'
 import { fetchCounter } from '~/apis'
+import createService from '~/modules/createService'
 
 export const getCount = createService(async (current: number) => {
   const { code, message, result } = await fetchCounter({ current })

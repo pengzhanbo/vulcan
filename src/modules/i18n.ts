@@ -1,5 +1,5 @@
-import messages from '@intlify/unplugin-vue-i18n/messages'
 import type { App } from 'vue'
+import messages from '@intlify/unplugin-vue-i18n/messages'
 import { createI18n } from 'vue-i18n'
 import { DEFAULT_LANGUAGE } from '~/common'
 

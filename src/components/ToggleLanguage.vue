@@ -1,6 +1,6 @@
 <script lang="ts" setup>
+import { languageList as languageListRaw, type LanguageOptions } from '~/common'
 import LangIcon from './icons/LangIcon.vue'
-import { type LanguageOptions, languageList as languageListRaw } from '~/common'
 
 const [show, toggle] = useToggle(false)
 const open = () => toggle(true)

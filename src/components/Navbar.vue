@@ -1,8 +1,8 @@
 <script lang="ts" setup>
+import { setupNavbar } from '~/composables'
 import ArrowLeftIcon from './icons/ArrowLeftIcon.vue'
 import ToggleDarkMode from './ToggleDarkMode.vue'
 import ToggleLanguage from './ToggleLanguage.vue'
-import { setupNavbar } from '~/composables'
 
 const { title } = setupNavbar()
 
