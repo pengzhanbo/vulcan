@@ -1,9 +1,11 @@
 module.exports = {
   plugins: {
     'autoprefixer': {},
-    // https://github.com/lkxian888/postcss-px-to-viewport-8-plugin
-    'postcss-px-to-viewport-8-plugin': {
+    // https://github.com/wswmsword/postcss-mobile-forever
+    'postcss-mobile-forever': {
       viewportWidth: 375,
+      maxDisplayWidth: 600,
+      border: true,
     },
   },
 }
