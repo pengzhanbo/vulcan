@@ -25,7 +25,7 @@
 - 🎨 使用 postcss / sass 编写 CSS
 - 📒 封装 [axios](https://axios-http.com) - 更好的管理 API，代码即 API 文档
 - 📬 API Mock Data - 通过 mock-dev-server 在项目开发环境中对 接口进行 mock
-- ⚖️ px to viewport
+- ⚖️ 使用 [mobile-forever](https://github.com/wswmsword/postcss-mobile-forever) 实现移动端伸缩视图，兼容适配桌面端（可关闭）
 - 📐 eslint
 - ⏳ git hooks - 规范 git commit 内容格式
 
