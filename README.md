@@ -1,7 +1,7 @@
 # Vulcan
 
 <p align="center">
-  <img src="https://github.com/pengzhanbo/vulcan/blob/main/public/logo.png?raw=true" />
+  <img src="https://github.com/pengzhanbo/vulcan/blob/main/public/logo.png?raw=true" alt="Vulcan">
 </p>
 
 <p align="center">🚀🚀一个基于 vite + vue3 的项目模板，帮助快速创建 Mobile Web 应用。🚀🚀</p>
