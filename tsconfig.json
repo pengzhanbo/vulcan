@@ -4,8 +4,8 @@
     "jsx": "preserve",
     "lib": ["DOM", "ESNext"],
     "baseUrl": ".",
-    "module": "ESNext",
-    "moduleResolution": "node",
+    "module": "esnext",
+    "moduleResolution": "bundler",
     "paths": {
       "~/*": ["src/*"]
     },

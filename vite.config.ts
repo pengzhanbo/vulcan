@@ -7,7 +7,7 @@ import VueJsx from '@vitejs/plugin-vue-jsx'
 import AutoImport from 'unplugin-auto-import/vite'
 import { defineConfig, loadEnv } from 'vite'
 import Inspect from 'vite-plugin-inspect'
-import MockDevServer from 'vite-plugin-mock-dev-server'
+import { mockDevServerPlugin } from 'vite-plugin-mock-dev-server'
 import TsconfigPath from 'vite-tsconfig-paths'
 
 // import Devtools from 'vite-plugin-vue-devtools'
@@ -40,7 +40,7 @@ export default defineConfig(({ mode, command }) => {
       Eruda(),
 
       // https://github.com/pengzhanbo/vite-plugin-mock-dev-server
-      MockDevServer(),
+      mockDevServerPlugin(),
 
       // https://github.com/intlify/bundle-tools/tree/main/packages/unplugin-vue-i18n
       VueI18n({
